@@ -513,9 +513,132 @@
 # p "a,b,c,d,e".split(/,/, 6)
 
 #squeeze, squeeze!
-str = "112233445566778899"
-p str.squeeze 
-p str.squeeze("2-8")
-p str
-p str.squeeze!("2-8")
-p str
+# str = "112233445566778899"
+# p str.squeeze 
+# p str.squeeze("2-8")
+# p str
+# p str.squeeze!("2-8")
+# p str
+
+#start_with?
+# p "string".start_with?("str")
+# p "string".start_with?("ing")
+# p "string".start_with?("s", "t")
+
+#strip, strip!
+# str = "  hello  "
+# p str.strip
+# p str
+# p str.strip!
+# p str
+
+#sub, sub!
+# p 'abcabc'.sub(/b/, '<<\&>>')
+# p 'abcabc'.sub(/b/) {|s| s.upcase }
+# hash = {'b'=>'B', 'c'=>'C'}
+# p "abcabc".sub(/[bc]/, hash) 
+# buf = "String-String"
+# buf.sub!(/in./, "!!")
+# p buf
+
+#succ, succ!
+# str = "aa"
+# p str.succ
+# p str
+# p str.succ!
+# p str
+
+#sum
+# p "hello".sum
+
+#swapcase, swapcase!
+# str = "HelLo"
+# p str.swapcase
+# p str
+# p str.swapcase!
+# p str
+
+#to_c
+# p '9'.to_c
+# p '2.5'.to_c
+# p '2.5/1'.to_c
+# p '-3/2'.to_c
+# p '-i'.to_c
+# p '45i'.to_c
+# p '3-4i'.to_c
+
+#to_f
+# p "-10".to_f
+# p "10e2".to_f
+# p "1e-2".to_f
+# p ".1".to_f
+
+#to_i
+# p " 10".to_i
+# p "+10".to_i
+# p "-10".to_i
+
+#to_r
+# p '  2  '.to_r
+# p '1/3'.to_r
+# p '-9.2'.to_r
+# p '-9.2E2'.to_r
+
+#to_s, to_str
+# p "str".to_s
+# p "str".to_str
+
+#to_sym
+# p "foo".to_sym
+# p "foo".to_sym.to_s == "foo"
+
+#tr, tr!
+# p "foo".tr('a-z', 'A-Z')
+# p "ORYV".tr("A-Z", "D-ZA-C")
+# str = "hello"
+# p str.tr!("el", "ip")
+# p str
+
+#tr_s, tr_s!
+# str = "goooooodbyyyyyye"
+# p str.tr_s("o", "a")
+# p str
+# p str.tr_s!("o", "a")
+# p str
+
+#undump
+# p "\"hello \\n ''\"".undump
+
+#unicode_normalize, unicode_normalize!
+# str = "a\u0300"
+# p str.unicode_normalize(:nfc)
+# p str
+# p str.unicode_normalize!(:nfc)
+# p str
+
+#unicode_normalized?
+# p "a\u0300".unicode_normalized?
+# p "a\u0300".unicode_normalized?(:nfd)
+
+#unpack
+# p "abc".unpack("C*")
+
+#unpack1
+# p "abc".unpack1("C*")
+# p "ABC".unpack1("C*")
+
+#upcase, upcase!
+# str = "hello"
+# p str.upcase
+# p str
+# p str.upcase!
+# p str
+
+#upto
+# 'a'.upto('za') do |str|
+#   puts str
+# end
+
+#valid_encoding?
+# p "\xc2\xa1".force_encoding("UTF-8").valid_encoding?
+# p "\xc2".force_encoding("UTF-8").valid_encoding?
